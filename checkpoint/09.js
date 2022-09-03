@@ -25,6 +25,26 @@ const { BinarySearchTree } = require("../DS");
 
 BinarySearchTree.prototype.getHouseValues = function (side, total = 0) {
   // Tu código aquí:
+  if(side === "left"){
+    if(this.left === null){
+      return total
+    }
+    else{
+      total += this.left.value
+      return this.left.getHouseValues(side, total)
+    }
+    
+    
+  }
+  else if(side === "right"){
+    if(this.right === null){
+      return total
+    }
+    else{
+      total += this.right.value
+      return this.right.getHouseValues(side, total)
+    }
+  }
 }
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️

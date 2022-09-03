@@ -1,4 +1,4 @@
-// 2️⃣ ***** EJERCICIO 2 ***** - calcularImpuestos() 2️⃣
+ // 2️⃣ ***** EJERCICIO 2 ***** - calcularImpuestos() 2️⃣
 // En este ejercicio, debemos implementar la función calcularImpuestos, de forma recursiva.
 // Debes retornar la suma total con los decimales incluidos.
 // La función recibirá boletas/facturas con los impuestos anuales por la casa, aunque pueden haber 
@@ -23,6 +23,11 @@
 
 const calcularImpuestos = (factura, i = 0, acc = 0) => {
   // Tu código aquí:
+  if(!Array.isArray(factura)) return "Error"
+  if(factura.length === 0) return false
+
+
+  return factura[i] = factura[i] + calcularImpuestos(factura.slice(1))
 }
 
 

@@ -19,6 +19,20 @@
 
 function sortPrimeHouses(array) {
   // Tu código aquí:
+  for(let x = 0; x < array.length; x++){
+
+    for(let i = 0; i < array.length - x - 1; i++){
+      if(!(array[i]%2 === 0)){
+        return false
+      }
+      else if(array[i] > array[i+1]){
+        let min = array[i+1]
+        array[i+1] = array[i]
+        array[i] = min
+      } 
+    }
+  }
+  return array
 }
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️

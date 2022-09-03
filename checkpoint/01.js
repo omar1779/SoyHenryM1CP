@@ -31,7 +31,18 @@ const { Queue } = require("../DS");
 
 function henryParty(arr) {
   // Tu código aquí:
-  let asereje = null
+  let listaInvitados = new Queue()
+
+
+
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i].ticket === "VIP" && arr[i].estado === "conocido"){
+      
+      listaInvitados.enqueue(arr[i])
+    }
+  }
+  
+  return listaInvitados
 
 }
 

@@ -30,6 +30,30 @@ const { BinarySearchTree } = require("../DS");
 //  🟢 Recorrer el arbol de manera depth-first pre-order
 BinarySearchTree.prototype.spotHousePrices = function (num, arr = []) {
     // Tu código aquí:
+    /** 
+    if(this.value > num) arr.push(this.value)
+
+    if(this.left !== null && this.left.value > num)
+    {
+      arr.push(this.left.value)
+      
+    }
+    this.left.spotHousePrices(num, arr)
+
+    if(this.right !== null && this.right.value > num) 
+    {
+      arr.push(this.right.value)
+      
+    }
+    this.right.spotHousePrices(num, arr)
+    return arr
+    */
+    if(this.value > num) arr.push(this.value)
+
+    if(this.left === null){
+    
+    }
+    
   }
   
   // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️

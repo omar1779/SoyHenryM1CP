@@ -22,6 +22,23 @@ const { Stack } = require("../DS");
 
 function tipologiasSeparadas(arr) {
   // Tu código aquí:
+  if(arr.length === 0) return "Tipologias inexistentes"
+  let fila = new Stack()
+  let fila2 = new Stack()
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 1; j < arr.length; j++) {
+      if(arr[i] === arr[j]){
+        let aux = arr[j].unshift
+        fila.push(aux)
+      }
+      else{
+        return 
+      }
+    }
+    
+  }
+  fila = arr.concat(fila)
+  return fila
 }
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️

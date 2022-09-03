@@ -31,7 +31,7 @@ const { Queue } = require("../DS");
 
 function henryParty(arr) {
   // Tu código aquí:
-  let asereje
+  let asereje = null
 
 }
 
